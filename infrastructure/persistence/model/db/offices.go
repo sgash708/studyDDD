@@ -1,6 +1,6 @@
 package db
 
-// Office ...
+// Office 法律事務所モデル
 type Office struct {
 	BaseModel
 	ID                   int

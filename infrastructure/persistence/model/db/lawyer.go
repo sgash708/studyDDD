@@ -1,6 +1,6 @@
 package db
 
-// Lawyer ...
+// Lawyer 弁護士モデル
 type Lawyer struct {
 	BaseModel
 	ID             int
