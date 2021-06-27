@@ -13,10 +13,12 @@ type OfficeRepository struct {
 	*sql.DB
 }
 
+// NewOfficeRepository 構造体初期化
 func NewOfficeRepository(Conn *sql.DB) irepo.IOfficeRepository {
 	return &OfficeRepository{Conn}
 }
 
+// Insert データ挿入
 func (repo *OfficeRepository) Insert(office *db.Office) error {
 	stmt, err := repo.DB.Prepare("INSERT INTO godb.offices(id, corporate_name, bar_association, name, office_bar_association, postcode, address, phone_number, fax_number, corp_kanji, office_kanji) SELECT %s, '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', %s, %s WHERE NOT EXISTS (SELECT id FROM godb.offices WHERE id = %s);")
 	if err != nil {
