@@ -1,9 +1,10 @@
 # DDDStudy
-UI層
-↓
-application層
-↓
-application層
+レイヤードアーキテクチャでの実装を試みる
+
+* UI層
+* Application層
+* Domain層
+* infra層
 
 
 # ref
